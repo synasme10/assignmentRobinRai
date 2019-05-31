@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import Adapter.ItemAdapter;
 import OnlineClothingApi.ItemApi;
@@ -26,7 +27,7 @@ import retrofit2.Retrofit;
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
     private RecyclerView recycle;
     private List<Item_Model> list = new ArrayList<>();
-    private Button btnAddItem;
+    private ImageView btnAddItem;
     private Retrofit retrofit;
     private ItemApi item_api;
     Base_Url baseUrl;

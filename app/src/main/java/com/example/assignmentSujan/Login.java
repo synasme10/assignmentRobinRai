@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import OnlineClothingApi.UserApi;
@@ -22,7 +23,8 @@ import retrofit2.Retrofit;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText username, password;
-    private Button btnlogin, btnS;
+    private Button btnlogin;
+    private TextView Tvcreateacount;
     private Retrofit retrofit;
     private UserApi userApi;
     private Base_Url api;
@@ -46,8 +48,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         password = findViewById(R.id.log_password);
         btnlogin = findViewById(R.id.btnlogin);
         btnlogin.setOnClickListener(this);
-        btnS = findViewById(R.id.button2);
-        btnS.setOnClickListener(this);
+        Tvcreateacount = findViewById(R.id.Tvcreateaccount);
+        Tvcreateacount.setOnClickListener(this);
     }
 
     @Override
@@ -62,7 +64,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 return;
             }
             AuthenticateUser(username.getText().toString(), password.getText().toString());
-        }else if(v.getId() == R.id.button2){
+        }else if(v.getId() == R.id.Tvcreateaccount){
             startActivity(new Intent(Login.this, RegisterActivity.class));
         }
     }

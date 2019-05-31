@@ -89,13 +89,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHold>{
     }
 
     public class ViewHold extends RecyclerView.ViewHolder{
-        private TextView itemName, itemPrice, itemDescription;
+        private TextView itemName, itemPrice,itemDescription;
         private ImageView img;
         public ViewHold(@NonNull View v) {
             super(v);
-            itemName = v.findViewById(R.id.custom_item_name);
             itemPrice = v.findViewById(R.id.custom_item_price);
-            itemDescription = v.findViewById(R.id.custom_item_description);
+            itemName = v.findViewById(R.id.custom_item_description);
             img = v.findViewById(R.id.imageView2);
         }
     }

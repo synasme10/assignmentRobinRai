@@ -8,34 +8,57 @@
     android:layout_height="match_parent">
 
 
-    <EditText
-        android:id="@+id/log_username"
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="LOGIN"
+        android:textSize="25sp" />
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="UserName"/>
+        android:layout_margin="5dp"
+        >
+        <EditText
+            android:id="@+id/log_username"
+            style="@style/edittext"
+            android:hint="Username"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/log_password"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="Password"
-        />
+        android:layout_margin="5dp"
+        >
+        <EditText
+            android:id="@+id/log_password"
+            style="@style/edittext"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+    </android.support.design.widget.TextInputLayout>
 
-   <Button
-       android:id="@+id/btnlogin"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="LOGIN"
-       />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:id="@+id/btnlogin"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Create an account"
+        android:text="Login"
+        android:layout_gravity="center"
         />
 
-
+    <TextView
+        android:id="@+id/Tvcreateaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:text="Create an New Account"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp" />
 
 </LinearLayout>
