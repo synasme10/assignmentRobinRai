@@ -1,63 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView3"
-        android:layout_width="300sp"
-        android:layout_height="300sp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/photoicon1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/textview"
+        android:layout_below="@+id/imageView3"
+        android:text="Item Name :"
+        android:textSize="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        />
 
     <TextView
         android:id="@+id/tvItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="ItemName : Apple"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        style="@style/textview"
+        android:layout_below="@+id/imageView3"
+        android:layout_toEndOf="@+id/name"
+        android:hint="Item"
+        android:layout_marginTop="25dp"
+        />
 
     <TextView
-        android:id="@+id/tvprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="ItemPrice : 100"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvItemName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvItemName"
-        app:layout_constraintTop_toBottomOf="@+id/tvItemName"
-        app:layout_constraintVertical_bias="0.14" />
+        android:id="@+id/description"
+        style="@style/textview"
+        android:layout_below="@+id/name"
+        android:text="Description :"
+        android:textSize="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        />
 
     <TextView
         android:id="@+id/tvDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="ItemDescription : Hight End Phone"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvprice"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvprice"
-        app:layout_constraintTop_toBottomOf="@+id/tvprice"
-        app:layout_constraintVertical_bias="0.159" />
-</android.support.constraint.ConstraintLayout>
+        style="@style/textview"
+        android:layout_below="@+id/name"
+        android:layout_toEndOf="@+id/description"
+        android:hint="Description"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/tvprice"
+        style="@style/textview"
+        android:layout_below="@+id/description"
+        android:hint="Price"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40dp"
+        />
+
+
+</RelativeLayout>
